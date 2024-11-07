@@ -24,3 +24,16 @@ def load_and_preprocess_data(file_path):
     X_train, X_test, y_train, y_test = train_test_split(X_vectorized, y, test_size=0.2, random_state=42)
     
     return X_train, X_test, y_train, y_test, vectorizer
+    # model_selection.py
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+
+def get_models():
+    models = {
+        'Logistic Regression': LogisticRegression(),
+        'Decision Tree': DecisionTreeClassifier(),
+        'SVM': SVC()
+    }
+    return models
